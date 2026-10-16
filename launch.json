@@ -1,0 +1,24 @@
+{
+  "kind": "custom_token",
+  "token": {
+    "contract": "AgentDuel",
+    "name": "Agent Duel",
+    "symbol": "AD",
+    "decimals": 18,
+    "constructorArgs": [],
+    "totalSupply": "1000000000000000000000000000"
+  },
+  "contracts": [],
+  "pool": {
+    "pairedCurrency": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "fee": 12500,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "economics": {
+    "poolBps": 8000,
+    "initialMarketCapWei": "3500000000000000000000",
+    "remainderTo": "0x206f5dbf4f135c6183b5a5b99327fa0be34cb4d9"
+  },
+  "notes": "AgentDuel (src/AgentDuel.sol) is a fixed-supply OpenZeppelin v5 ERC-20 named Agent Duel with symbol AD and 18 decimals. Its constructor takes no arguments and mints the whole supply of 1,000,000,000 AD (1000000000000000000000000000 base units) once to msg.sender, the factory. There is no mint, burn, owner, pause, blacklist, tax, transfer burn, proxy or upgrade path, and the runtime makes no external calls, so every launch flow (factory to distributor, distributor claims, pool seed and swaps through the PoolManager) moves exactly the stated amount. The tree has no application contracts. The pool pairs with IMD at 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7 at the launch policy fee of 1.25%; the deployer derives the opening price from economics.initialMarketCapWei and totalSupply, so pool.initialPrice is provenance only."
+}
